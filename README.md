@@ -8,7 +8,7 @@ then work on index.db to get that up.
 Deploy to Herokuk ASAP
 
 
-• build a single-page app text editor that runs in the browser; can also function offline.
+√ build a single-page app text editor that runs in the browser; can also function offline.
 • feature a number of data persistence techniques for redundancy in case one of the options is not supported by the browser.
 • start with an existing application and implement methods for getting and storing data to an IndexedDB database.
 • use `idb`, a lightweight wrapper around the IndexedDB API.
@@ -20,7 +20,7 @@ Deploy to Herokuk ASAP
 ```
 
 ## Acceptance Criteria
-WHEN I open my application in my editor I should see a client server folder structure
+√ WHEN I open my application in my editor I should see a client server folder structure
 WHEN I run `npm run start` from the root directory
 THEN I find that my application should start up the backend and serve the client
 WHEN I run the text editor application from my terminal
