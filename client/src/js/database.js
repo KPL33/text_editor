@@ -14,7 +14,7 @@ const initdb = async () =>
     },
   });
 
-//The "put" function allows us to "open" a connection to the "DB" and establishes that users have the ability to "read" and "Write" to the data stored there, via this method. 
+//The "put" function allows us to "open" a connection to the "DB" and grants users "read" and "Write" privileges to the data stored there, via this method. It then "stores" the updated "object", gives it an "id" and has a "value" of the text "content" that was provided by the user. Once it finishes "await"ing the "request" and has the "result", it "log"s the "Data saved..." message to the "console", notifying the user that the "transaction" was successful.
 export const putDb = async (content) => {
   const jate = await openDB('jate', 1);
   const tx = jate.transaction('jate', 'readwrite');
@@ -24,6 +24,7 @@ export const putDb = async (content) => {
   console.log('Data saved to the database', result);
 };
 
+//The "get" function operates in a similar fashion to the "put". retrieving the "store"d data from the "Db" and "log"ging it to the "console".
 export const getDb = async () => {
   const jateDb = await openDB('jate', 1);
   const tx = jateDb.transaction('jate', 'readonly');
@@ -34,4 +35,5 @@ export const getDb = async () => {
   return result;
 };
 
+//We call the "initdb" function that was established above to get start the databse.
 initdb();
