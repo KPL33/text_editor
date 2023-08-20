@@ -3,10 +3,9 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
-import { header } from './header';
 
 const main = document.querySelector('#main');
-main.innerHTML = header;
+main.innerHTML = '';
 
 //"loadSpinner" is defined to create and append a loading "Spinner" "Element" to the "main" container. It prepares a "Spinner" that will be shown while the "editor" is being initialized.
 const loadSpinner = () => {
